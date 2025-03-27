@@ -3,5 +3,5 @@
 --
 -- See the kickstart.nvim README for more information
 return { {
-	"https://github.com/github/copilot.vim"
+	-- "https://github.com/github/copilot.vim"
 } }
