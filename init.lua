@@ -303,9 +303,17 @@ require('lazy').setup({
 
   {
     -- Color scheme
-    -- In visual mode 'gc' to comment out selection
-    'https://github.com/rose-pine/neovim',
-    name = 'rose-pine',
+    'folke/tokyonight.nvim',
+    priority = 1000,
+    config = function()
+      require('tokyonight').setup {
+        style = 'night', -- night, storm, day, or moon
+        styles = {
+          comments = { italic = false },
+        },
+      }
+      vim.cmd.colorscheme 'tokyonight-night'
+    end,
   },
   {
     -- Useful plugin to show you pending keybinds.
